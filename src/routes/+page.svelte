@@ -3,14 +3,22 @@
     import Logo from "$lib/Images/Logo.png";
     import { fade, scale } from "svelte/transition";
 
+    // AOS.init();
+
     let images = [
-        "https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dmVnZXRhYmxlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1598030304671-5aa1d6f21128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHZlZ2V0YWJsZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHZlZ2V0YWJsZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-        "https://media.istockphoto.com/id/1524823226/photo/colorful-raw-fruits-and-vegetables-varied-vegan-food-vivid-rainbow-arrangement.webp?b=1&s=170667a&w=0&k=20&c=S5dNqLRpZc0WNlgtxgQAFj1x41_qsM1bL9qioqtHIxw=",
-        "https://media.istockphoto.com/id/1347540778/photo/leaves-of-different-sizes-and-colors-close-up.webp?b=1&s=170667a&w=0&k=20&c=-dto-2w3V3v_CZZuErUSHwAHr2QS_CEVq2VN3jm341k=",
-        "https://media.istockphoto.com/id/1474498534/photo/female-dietitian-doctor-writing-meal-plan.webp?b=1&s=170667a&w=0&k=20&c=XXSbxmBKN-zMQgXfr79NapN1UqbtU0klPe1Ovxm5qLA=",
-        "https://www.shutterstock.com/image-photo/fresh-healthy-vegitables-fruits-260nw-1569804757.jpg",
+        "https://media.istockphoto.com/id/683044558/photo/fresh-fruits-and-vegetables.webp?b=1&s=612x612&w=0&k=20&c=2eztQ0g2l1L4nRBe3pT5M5l9XQaWlJtLcB40fkrfuGo=",
+
+        "https://cdn.pixabay.com/photo/2013/11/29/15/15/fruit-221158_640.jpg",
+
+        "https://cdn.pixabay.com/photo/2018/04/12/23/57/still-the-fruit-bowl-of-life-3315231_640.jpg",
+
+        "https://cdn.pixabay.com/photo/2017/11/06/18/00/food-photography-2924407_640.jpg",
+
+        "https://cdn.pixabay.com/photo/2015/10/09/21/40/fruit-980014_640.jpg",
+
+        "https://cdn.pixabay.com/photo/2016/08/31/09/08/apple-1632919_640.jpg",
+
+        "https://cdn.pixabay.com/photo/2023/02/06/18/33/mixed-fruits-7772552_640.jpg",
     ];
 
     let i = 0;
@@ -100,12 +108,19 @@
     </ul>
 </nav>
 
-<section
+<!-- <section
     class="relative bg-cover bg-center bg-no-repeat h-screen w-full;"
     style="background-image: url('{images[i]}');"
 >
     .<br />
-</section>
+</section> -->
+
+<section class="relative bg-cover bg-center bg-no-repeat h-screen w-full transition-background-image" style="background-image: url('{images[i]}');">
+
+    <h1 class="text-6xl font-bold text-white flex items-center justify-center">KrushiDham The Import Export firm</h1>
+
+  </section>
+  
 
 <section data-aos="fade-up" class="bg-white">
     <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
@@ -171,12 +186,12 @@
     <div>
         <h1 class="font-bold text-6xl text-center">Our Products</h1>
     </div>
-    <div class="flex flex-wrap m-10 px-36">
+    <div class="flex flex-wrap m-10 justify-evenly">
         {#each products as pr}
             <div class="  mt-8 p-4">
                 <div class=" border-2 border-black-900">
                     <img
-                        class="h-80 w-80 rounded-md p-4 hover:scale-110 duration-300"
+                        class="h-80 w-80 rounded-md object-cover	 p-4 hover:scale-110 duration-300"
                         src={pr.img}
                         alt={pr.name}
                     />
@@ -192,50 +207,49 @@
 <div data-aos="fade-up" class="parent h-screen">
     <div class="div1 h-full w-full">
         <img
-            class="h-full w-full"
+            class="h-full w-full object-cover"
             src="http://puregointernational.in/images/category-2.jpg"
             alt="img"
         />
     </div>
-    <div class="div2 h-full w-full">
+    <div class="div2 h-full w-full object-cover">
        <h1 class="text-center justify-center font-bold text-5xl ">KrushiDham Exporters </h1>
     </div>
-    <div class="div3 h-full w-full">
+    <div class="div3 h-full w-full object-cover">
         <img
             class="h-full w-full"
             src="http://puregointernational.in/images/category-4.jpg"
             alt="img"
         />
     </div>
-    <div class="div4 h-full w-full">
+    <div class="div4 h-full w-full object-cover">
         <img
             class="h-full w-full"
-            src="https://www.shutterstock.com/image-photo/fresh-healthy-vegitables-fruits-260nw-1569804757.jpg"
+            src="https://cdn.pixabay.com/photo/2018/07/12/14/51/fruit-3533619_640.jpg" alt="img"
+        />
+    </div>
+    <div class="div5 h-full w-full object-cover">
+        <img
+            class="h-full w-full"
+            src="https://cdn.pixabay.com/photo/2018/03/09/17/46/paprika-3212163_640.jpg"
             alt="img"
         />
     </div>
-    <div class="div5 h-full w-full">
+    <div class="div6 h-full w-full object-cover">
         <img
             class="h-full w-full"
-            src="https://www.shutterstock.com/image-photo/fresh-healthy-vegitables-fruits-260nw-1569804757.jpg"
+            src="https://cdn.pixabay.com/photo/2015/03/30/19/36/fruit-700002_640.jpg"
             alt="img"
         />
     </div>
-    <div class="div6 h-full w-full">
+    <div class="div7 h-full w-full ">
         <img
             class="h-full w-full"
-            src="https://www.shutterstock.com/image-photo/fresh-healthy-vegitables-fruits-260nw-1569804757.jpg"
+            src="https://media.istockphoto.com/id/589415708/photo/fresh-fruits-and-vegetables.webp?b=1&s=612x612&w=0&k=20&c=x2SmzKY4cn1sYt7F2MMoVD-Io0GblbJZvWFHApZs_64="
             alt="img"
         />
     </div>
-    <div class="div7 h-full w-full">
-        <img
-            class="h-full w-full"
-            src="https://www.shutterstock.com/image-photo/fresh-healthy-vegitables-fruits-260nw-1569804757.jpg"
-            alt="img"
-        />
-    </div>
-    <div class="div8 h-full w-full">
+    <div class="div8 h-full w-full ">
         <img
             class="h-full w-full"
             src="https://www.shutterstock.com/image-photo/fresh-healthy-vegitables-fruits-260nw-1569804757.jpg"
@@ -281,4 +295,11 @@
     .div8 {
         grid-area: 7 / 1 / 9 / 4;
     }
+
+
+   
+.transition-background-image {
+  transition:  0.7s ease-out ;
+}
+
 </style>
