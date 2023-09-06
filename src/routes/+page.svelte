@@ -115,12 +115,14 @@
     .<br />
 </section> -->
 
-<section class="relative bg-cover bg-center bg-no-repeat h-screen w-full transition-background-image" style="background-image: url('{images[i]}');">
-
-    <h1 class="text-6xl font-bold text-white flex items-center justify-center">KrushiDham The Import Export firm</h1>
-
-  </section>
-  
+<section
+    class="relative bg-cover bg-center bg-no-repeat h-screen w-full transition-background-image"
+    style="background-image: url('{images[i]}');"
+>
+    <h1 class="flex text-6xl font-bold text-white text-center justify-center">
+        KrushiDham The Import Export firm
+    </h1>
+</section>
 
 <section data-aos="fade-up" class="bg-white">
     <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
@@ -191,7 +193,7 @@
             <div class="  mt-8 p-4">
                 <div class=" border-2 border-black-900">
                     <img
-                        class="h-80 w-80 rounded-md object-cover	 p-4 hover:scale-110 duration-300"
+                        class="h-80 w-80 rounded-md object-cover p-4 hover:scale-110 duration-300"
                         src={pr.img}
                         alt={pr.name}
                     />
@@ -213,7 +215,9 @@
         />
     </div>
     <div class="div2 h-full w-full object-cover">
-       <h1 class="text-center justify-center font-bold text-5xl ">KrushiDham Exporters </h1>
+        <h1 class="text-center justify-center font-bold text-5xl">
+            KrushiDham Exporters
+        </h1>
     </div>
     <div class="div3 h-full w-full object-cover">
         <img
@@ -225,7 +229,8 @@
     <div class="div4 h-full w-full object-cover">
         <img
             class="h-full w-full"
-            src="https://cdn.pixabay.com/photo/2018/07/12/14/51/fruit-3533619_640.jpg" alt="img"
+            src="https://cdn.pixabay.com/photo/2018/07/12/14/51/fruit-3533619_640.jpg"
+            alt="img"
         />
     </div>
     <div class="div5 h-full w-full object-cover">
@@ -242,14 +247,14 @@
             alt="img"
         />
     </div>
-    <div class="div7 h-full w-full ">
+    <div class="div7 h-full w-full">
         <img
             class="h-full w-full"
             src="https://media.istockphoto.com/id/589415708/photo/fresh-fruits-and-vegetables.webp?b=1&s=612x612&w=0&k=20&c=x2SmzKY4cn1sYt7F2MMoVD-Io0GblbJZvWFHApZs_64="
             alt="img"
         />
     </div>
-    <div class="div8 h-full w-full ">
+    <div class="div8 h-full w-full">
         <img
             class="h-full w-full"
             src="https://www.shutterstock.com/image-photo/fresh-healthy-vegitables-fruits-260nw-1569804757.jpg"
@@ -263,6 +268,11 @@
 <slot />
 
 <style>
+    @import url("https://fonts.googleapis.com/css2?family=Borel&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Stylish&display=swap");
+
+   *{
+        font-family: "Stylish", sans-serif;
+    }
     .parent {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -296,10 +306,7 @@
         grid-area: 7 / 1 / 9 / 4;
     }
 
-
-   
-.transition-background-image {
-  transition:  0.7s ease-out ;
-}
-
+    .transition-background-image {
+        transition: 0.7s ease-out;
+    }
 </style>
